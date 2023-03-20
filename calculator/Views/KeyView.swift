@@ -39,8 +39,30 @@ struct KeyView: View {
                             .foregroundColor(.black)
                     )
             }.padding()
-            Text(value)
+            ForEach(buttons, id: \.self) { row in
+                HStack(spacing: 10){
+                    ForEach(row, id: \.self) { elem in
+                        Button {
+                            self.didTap(button: elem)
+                        } label: {
+                            Text(elem.rawValue)
+                                .font(.system(size: 30))
+                                .frame(width: 60, height: 60)
+                                .background(elem.buttonColor)
+                                .foregroundColor(.black)
+                                .cornerRadius(30)
+                                .shadow(color: .purple.opacity(0.8), radius: 30)
+                        }
+
+                    }
+                }
+                .padding(.bottom, 4)
+            }
         }
+    }
+    
+    func didTap(button: Keys) {
+        print("Apasat!")
     }
 }
 
