@@ -10,7 +10,7 @@ import SwiftUI
 struct KeyView: View {
     @State var value = "0"
     @State var runningNumber = 0
-    @State var currentOperatio: Operation = .none
+    @State var currentOperation: Operation = .none
     @State private var changeColor: Bool = false
     
     let buttons : [[Keys]] = [
@@ -76,7 +76,54 @@ struct KeyView: View {
     }
     
     func didTap(button: Keys) {
-        print("Apasat!")
+        switch button {
+        case .add, .substract, .multiply, .divide, .equal:
+            if button == .add {
+                self.currentOperation = .add
+                self.runningNumber = Int(self.value) ?? 0
+            }
+            if button == .substract {
+                self.currentOperation = .substract
+                self.runningNumber = Int(self.value) ?? 0
+            }
+            if button == .multiply {
+                self.currentOperation = .multiply
+                self.runningNumber = Int(self.value) ?? 0
+            }
+            if button == .divide {
+                self.currentOperation = .divide
+                self.runningNumber = Int(self.value) ?? 0
+            }
+            if button == .equal {
+                let runningValue = self.runningNumber
+                let currentValue = Int(self.value) ?? 0
+               
+                switch self.currentOperation {
+                    case .add: self.value = "\(runningValue + currentValue)"
+                    case .divide: self.value = "\(runningValue / currentValue)"
+                    case .substract: self.value = "\(runningValue - currentValue)"
+                    case .multiply: self.value = "\(runningValue * currentValue)"
+                    case .none: break
+                }
+            }
+            if button != .equal {
+                self.value = "0"
+            }
+        case .clear:
+            self.value = "0"
+        case .decimal, .negative, .percent:
+            break
+        default:
+            let number = button.rawValue
+            
+            if self.value == "0" {
+                value = number
+            }
+            else {
+                self.value = "\(self.value)\(number)"
+            }
+              
+        }
     }
 }
 
