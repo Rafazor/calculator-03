@@ -47,10 +47,10 @@ struct KeyView: View {
                         } label: {
                             Text(elem.rawValue)
                                 .font(.system(size: 30))
-                                .frame(width: 60, height: 60)
+                                .frame(width: self.getWidth(elem: elem), height: self.getHight(elem: elem))
                                 .background(elem.buttonColor)
                                 .foregroundColor(.black)
-                                .cornerRadius(30)
+                                .cornerRadius(self.getWidth(elem: elem) / 2)
                                 .shadow(color: .purple.opacity(0.8), radius: 30)
                         }
 
@@ -59,6 +59,20 @@ struct KeyView: View {
                 .padding(.bottom, 4)
             }
         }
+    }
+    
+    func getHight(elem: Keys) -> CGFloat {
+      
+        return (UIScreen.main.bounds.width - (5*10)) / 5
+    }
+    
+    func getWidth(elem: Keys) -> CGFloat {
+        
+        if elem == .zero {
+            return (UIScreen.main.bounds.width - (5*10)) / 2
+        }
+        
+        return (UIScreen.main.bounds.width - (5*10)) / 4
     }
     
     func didTap(button: Keys) {

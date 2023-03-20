@@ -21,7 +21,7 @@ enum Keys: String {
     case nine = "9"
     case add = "+"
     case substract = "-"
-    case multiply = "*"
+    case multiply = "X"
     case divide = "/"
     case equal = "="
     case clear = "AC"
