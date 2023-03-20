@@ -12,6 +12,7 @@
 		F0DF1F2D29C8B8C30055F8FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0DF1F2C29C8B8C30055F8FB /* Assets.xcassets */; };
 		F0DF1F3029C8B8C30055F8FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0DF1F2F29C8B8C30055F8FB /* Preview Assets.xcassets */; };
 		F0DF1F3929C8BABF0055F8FB /* calculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DF1F3829C8BABF0055F8FB /* calculatorModel.swift */; };
+		F0DF1F3C29C8BEFE0055F8FB /* KeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DF1F3B29C8BEFE0055F8FB /* KeyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		F0DF1F2C29C8B8C30055F8FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0DF1F2F29C8B8C30055F8FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F0DF1F3829C8BABF0055F8FB /* calculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatorModel.swift; sourceTree = "<group>"; };
+		F0DF1F3B29C8BEFE0055F8FB /* KeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				F0DF1F2A29C8B8C20055F8FB /* ContentView.swift */,
+				F0DF1F3B29C8BEFE0055F8FB /* KeyView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0DF1F3C29C8BEFE0055F8FB /* KeyView.swift in Sources */,
 				F0DF1F3929C8BABF0055F8FB /* calculatorModel.swift in Sources */,
 				F0DF1F2B29C8B8C20055F8FB /* ContentView.swift in Sources */,
 				F0DF1F2929C8B8C20055F8FB /* calculatorApp.swift in Sources */,
